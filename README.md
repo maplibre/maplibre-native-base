@@ -1,4 +1,5 @@
-# maplibre-base
-MapLibre Base C++ Libraries
+# MapLibre Base C++ Libraries
+
+maplibre-base
 
 A collection of common static and header-only C++ libraries used among our native SDKs.
