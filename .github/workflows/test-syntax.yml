@@ -16,5 +16,17 @@ jobs:
     name: ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     steps:
-      - name: clang-format lint
-        uses: DoozyX/clang-format-lint-action@v0.14
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: ${{ matrix.node_version }}
+          architecture: ${{ matrix.architecture }}
+
+      - uses: DoozyX/clang-format-lint-action@v0.14
+
+
+      # - name: Run syntax script
+      #   run: |
+      #     set -eo pipefail
+      #     clang-format -i $(git ls-files *.hpp *.cpp |xargs -L1 -i find {} -type f -maxdepth 0) && git diff --exit-code
