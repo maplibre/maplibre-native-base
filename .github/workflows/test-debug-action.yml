@@ -3,8 +3,8 @@ name: Debug Build Tests
 on: push
 
 env:
-  CMAKE_C_COMPILER: gcc-6
-  CMAKE_CXX_COMPILER: g++-6
+  CMAKE_C_COMPILER: clang
+  CMAKE_CXX_COMPILER: clang++
 
 jobs:
   test_debug_build:
