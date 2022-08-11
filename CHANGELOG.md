@@ -1,4 +1,4 @@
-# Mapbox Base
+# MapLibre Base
 
 ## v1.9.1
 
