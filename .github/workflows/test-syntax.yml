@@ -1,8 +1,6 @@
-name: Unit Tests
+name: Syntax Tests
 
-on:
-  push:
-    branches: [main]
+on: push
 
 jobs:
   test_syntax:
@@ -38,24 +36,3 @@ jobs:
         run: |
           set -eo pipefail
           clang-format -i $(git ls-files *.hpp *.cpp |xargs -L1 -i find {} -type f -maxdepth 0) && git diff --exit-code
-
-    
-
-
-
-  - &syntax-check
-    stage: test
-    os: linux
-    language: cpp
-    name: Syntax Check
-
-    addons: &gcc6
-      apt:
-        sources: [ 'ubuntu-toolchain-r-test', 'llvm-toolchain-precise-3.8' ]
-        packages: [ 'clang-3.8', 'clang-tidy' ]
-
-    script: scripts/ci/run-syntax-check.sh
-
-    set -eo pipefail
-
-    clang-format -i $(git ls-files *.hpp *.cpp |xargs -L1 -i find {} -type f -maxdepth 0) && git diff --exit-code
