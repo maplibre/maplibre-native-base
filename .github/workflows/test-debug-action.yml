@@ -17,9 +17,9 @@ jobs:
         architecture:
           - x64
         ccompiler:
-          - gcc-6
+          - clang
         cxxcompiler:
-          - g++-6
+          - clang++
         release:
           - Debug
 
