@@ -1,0 +1,38 @@
+name: Debug Build Tests
+
+on: push
+
+jobs:
+  test_debug_build:
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+        node_version:
+          - 16
+        architecture:
+          - x64
+        ccompiler:
+          - clang
+        cxxcompiler:
+          - clang++
+        release:
+          - Debug
+
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and run tests
+        run: | 
+          set -eo pipefail
+          mkdir build && pushd build
+          export CC=${{ matrix.ccompiler }} CXX=${{ matrix.cxxcompiler }}
+          cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.release }} -DBUILD_TESTING=ON
+          make --jobs=4
+          # ccache -s
+          popd
+          set -eo pipefail
+          pushd build/test
+          ctest --verbose
+          popd 
