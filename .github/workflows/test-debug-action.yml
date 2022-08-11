@@ -25,8 +25,8 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
-      - name: Run syntax script
-      - run: | 
+      - name: Build and run tests
+        run: | 
           set -eo pipefail
           mkdir build && pushd build
           export CC=${{ matrix.ccompiler }} CXX=${{ matrix.cxxcompiler }}
