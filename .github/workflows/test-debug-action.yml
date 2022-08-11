@@ -2,6 +2,10 @@ name: Debug Build Tests
 
 on: push
 
+env:
+  CCOMPILER: gcc-6
+  CXXCOMPILER: g++-6
+
 jobs:
   test_debug_build:
     strategy:
