@@ -23,11 +23,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3.4.1
-        with:
-          node-version: ${{ matrix.node_version }}
-          architecture: ${{ matrix.architecture }}
       - name: Build and run tests
         run: | 
           set -eo pipefail
