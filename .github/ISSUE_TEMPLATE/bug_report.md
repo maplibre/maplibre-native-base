@@ -1,33 +1,49 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+about: Report a bug
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!--
+Hello! Thanks for contributing.  For the fastest response and resolution, please:
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+ - Make the issue title a succinct but specific description of the unexpected behavior.
+   Bad: "Map rotation is broken". 
+   Good: "map.setBearing(...) throws a TypeError for negative values"
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+ - Include a link to a minimal demonstration of the bug – more below …
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+ - Ensure you can reproduce the bug using the latest release.
 
-**Platform information (please complete the following information):**
- - OS: [e.g. iOS]
- - Platform [e.g. Qt, Node.js, iOS]
- - Version [e.g. 22]
+ - Check the console for relevant errors and warnings
 
+ - Only post to report a bug. For feature requests, please use https://github.com/maplibre/maplibre-gl-js/issues/new?template=Feature_request.md instead.  Direct all other questions to https://stackoverflow.com/questions/tagged/maplibre-gl-js
 
-**Additional context**
-Add any other context about the problem here.
+-->
+
+**maplibre-gl-js version**:
+
+**browser**:
+
+### Steps to Trigger Behavior
+
+ 1.
+ 2.
+ 3.
+
+### Link to Demonstration
+
+<!--
+Providing a minimal, complete, verifiable demonstration *dramatically* improves maintainers' and other community members' ability to understand and address the problem you're reporting. 
+
+We recommend using https://jsbin.com.
+
+Consider using the non-minified version for this demo to create better error messages. 
+E.g. `<script src='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl-dev.js'></script><link href='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css' rel='stylesheet' />`
+
+See https://stackoverflow.com/help/mcve for guidelines on creating an effective example.
+-->
+
+### Expected Behavior
+
+### Actual Behavior
