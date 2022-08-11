@@ -12,9 +12,9 @@ jobs:
           - 16
         architecture:
           - x64
-        ccompiler: 'gcc-6'
-        cxxcompiler: 'g++-6'
-        release: 'Debug'
+        ccompiler: gcc-6
+        cxxcompiler: g++-6
+        release: Debug
 
     name: ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
