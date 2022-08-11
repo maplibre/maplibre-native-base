@@ -1,0 +1,62 @@
+name: Unit Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test_syntax:
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+        node_version:
+          - 16
+        architecture:
+          - x64
+
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: ${{ matrix.node_version }}
+          architecture: ${{ matrix.architecture }}
+
+      - name: Install dependencies
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            clang-3.8 \
+            clang-tidy
+
+      - name: Run syntax script
+        run: |
+          set -eo pipefail
+          clang-format -i $(git ls-files *.hpp *.cpp |xargs -L1 -i find {} -type f -maxdepth 0) && git diff --exit-code
+
+    
+
+
+
+  - &syntax-check
+    stage: test
+    os: linux
+    language: cpp
+    name: Syntax Check
+
+    addons: &gcc6
+      apt:
+        sources: [ 'ubuntu-toolchain-r-test', 'llvm-toolchain-precise-3.8' ]
+        packages: [ 'clang-3.8', 'clang-tidy' ]
+
+    script: scripts/ci/run-syntax-check.sh
+
+    set -eo pipefail
+
+    clang-format -i $(git ls-files *.hpp *.cpp |xargs -L1 -i find {} -type f -maxdepth 0) && git diff --exit-code
