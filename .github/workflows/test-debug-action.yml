@@ -39,7 +39,7 @@ jobs:
           export CC=${{ matrix.ccompiler }} CXX=${{ matrix.cxxcompiler }}
           cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.release }} -DBUILD_TESTING=ON
           make --jobs=4
-          ccache -s
+          # ccache -s
           popd
           set -eo pipefail
           pushd build/test
