@@ -2,10 +2,6 @@ name: Debug Build Tests
 
 on: push
 
-env:
-  CMAKE_C_COMPILER: clang
-  CMAKE_CXX_COMPILER: clang++
-
 jobs:
   test_debug_build:
     strategy:
