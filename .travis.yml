@@ -30,7 +30,7 @@ jobs:
     os: linux
     language: node_js
     node_js:
-      - 10
+      - 16
     name: License Check
     script: scripts/check-license.sh
 
