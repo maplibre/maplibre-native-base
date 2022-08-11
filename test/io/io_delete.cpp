@@ -1,10 +1,9 @@
-#include <mapbox/io/io.hpp>
+#include "io_delete.hpp"
 
 #include <gtest/gtest.h>
 
-#include "io_delete.hpp"
-
 #include <cassert>
+#include <mapbox/io/io.hpp>
 #include <string>
 
 void deleteTests(const std::string& path, const std::string& copyPath, const std::string& invalidPath) {

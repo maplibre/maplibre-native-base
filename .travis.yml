@@ -12,28 +12,6 @@ env:
     - PROJECT_NAME="mapbox-base"
 
 jobs:
-  - &syntax-check
-    stage: test
-    os: linux
-    language: cpp
-    name: Syntax Check
-
-    addons: &gcc6
-      apt:
-        sources: [ 'ubuntu-toolchain-r-test', 'llvm-toolchain-precise-3.8' ]
-        packages: [ 'clang-3.8', 'clang-tidy' ]
-
-    script: scripts/ci/run-syntax-check.sh
-
-  - &license-check
-    state: test
-    os: linux
-    language: node_js
-    node_js:
-      - 16
-    name: License Check
-    script: scripts/check-license.sh
-
   - &test
     stage: test
     os: linux
