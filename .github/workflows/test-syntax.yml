@@ -23,15 +23,6 @@ jobs:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
 
-      - name: Install dependencies
-        env:
-          DEBIAN_FRONTEND: noninteractive
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            clang-3.8 \
-            clang-tidy
-
       - name: Run syntax script
         run: |
           set -eo pipefail
