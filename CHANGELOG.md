@@ -3,8 +3,8 @@
 ## v2.1.0
 
 ### 💫️ Features and Improvements
-Update [args](https://github.com/Taywee/args) from 6.2.3 to 6.4.1
-Update [rapidjson](https://github.com/Tencent/rapidjson) from (28 Jun 2019 - [d87b698d](https://github.com/Tencent/rapidjson/commit/d87b698d)) to (20 Jun 2022 - [27c3a8d](https://github.com/Tencent/rapidjson/commit/27c3a8d))
+- Update [args](https://github.com/Taywee/args) from 6.2.3 to 6.4.1
+- Update [rapidjson](https://github.com/Tencent/rapidjson) from (28 Jun 2019 - [d87b698d](https://github.com/Tencent/rapidjson/commit/d87b698d)) to (20 Jun 2022 - [27c3a8d](https://github.com/Tencent/rapidjson/commit/27c3a8d))
 
 ## v2.0.0
 
