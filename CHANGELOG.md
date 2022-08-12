@@ -1,14 +1,5 @@
 # MapLibre Base
 
-## v2.1.0
-
-### 💫️ Features and improvements
-- Update args from 6.2.3 to 6.4.1
-- Update geometry.hpp from 1.1.0 to 2.0.3
-- Update expected-lite from 0.4.0 to 0.6.2
-- Update filesystem from 1.5.10 to 1.5.12
-- Update rapidjson from (28 Jun 2019 - d87b698d) to (20 Jun 2022 - 27c3a8d)
-
 ## v2.0.0
 
 ### 💫️ Other
