@@ -1,6 +1,6 @@
 # MapLibre Base
 
-## v2.1.0
+## v2.1.0-pre.1
 
 ### 💫️ Features and improvements
 - Update args from 6.2.3 to 6.4.1
