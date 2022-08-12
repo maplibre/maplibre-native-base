@@ -1,10 +1,9 @@
 # MapLibre Base
 
-## v2.1.0-pre.1
+## v2.1.0
 
 ### 💫️ Features and improvements
 - Update args from 6.2.3 to 6.4.1
-- Update variant from 1.1.6 to 1.2.0
 - Update geometry.hpp from 1.1.0 to 2.0.3
 - Update expected-lite from 0.4.0 to 0.6.2
 - Update filesystem from 1.5.10 to 1.5.12
