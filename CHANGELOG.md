@@ -1,5 +1,11 @@
 # MapLibre Base
 
+## v2.0.0
+
+### 💫️ Other
+- [base] New fork maintained by Maplibre
+- [base] Replace Travis with Github Actions
+
 ## v1.9.1
 
 ### 💫️ Other
