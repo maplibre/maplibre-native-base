@@ -1,5 +1,10 @@
 # MapLibre Base
 
+## v2.2.0
+
+### 💫️ Features and Improvements
+- Update [geometry.hpp](https://github.com/mapbox/geometry.hpp.git) from 1.1.0 to 2.0.3
+
 ## v2.1.0
 
 ### 💫️ Features and Improvements
