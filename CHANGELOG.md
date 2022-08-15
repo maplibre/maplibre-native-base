@@ -1,5 +1,14 @@
 # MapLibre Base
 
+## v2.1.1
+
+### 💫️ Features and Improvements
+- [variant](https://github.com/mapbox/variant.git) from 1.1.6 to 1.2.0
+- [expected-lite](https://github.com/martinmoene/expected-lite) from 0.4.0 to 0.6.2
+- [filesystem](https://github.com/gulrak/filesystem.git) from 1.5.10 to 1.5.12
+- [googletest](https://github.com/google/googletest) 1.10.0 to 1.12.1
+
+
 ## v2.1.0
 
 ### 💫️ Features and Improvements
