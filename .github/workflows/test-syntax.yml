@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
 
-      - uses: DoozyX/clang-format-lint-action@v0.15
+      - uses: DoozyX/clang-format-lint-action@v0.16
 
 
       # - name: Run syntax script
