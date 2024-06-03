@@ -3,6 +3,11 @@ function(mapbox_base_add_library name include_path)
         return()
     endif()
 
+    if(NOT EXISTS ${include_path} OR NOT IS_DIRECTORY ${include_path})
+        get_filename_component(dir_name ${include_path} NAME)
+        message(FATAL_ERROR "Dependency '${dir_name}' not found")
+    endif()
+
     add_library(mapbox-base-${name} INTERFACE)
     add_library(Mapbox::Base::${name} ALIAS mapbox-base-${name})
 
@@ -22,7 +27,6 @@ mapbox_base_add_library(geojson-vt-cpp ${PROJECT_SOURCE_DIR}/deps/geojson-vt-cpp
 mapbox_base_add_library(geojson.hpp ${PROJECT_SOURCE_DIR}/deps/geojson.hpp/include)
 mapbox_base_add_library(geometry.hpp ${PROJECT_SOURCE_DIR}/deps/geometry.hpp/include)
 mapbox_base_add_library(jni.hpp ${PROJECT_SOURCE_DIR}/deps/jni.hpp/include)
-mapbox_base_add_library(optional ${PROJECT_SOURCE_DIR}/deps/optional)
 mapbox_base_add_library(pixelmatch-cpp ${PROJECT_SOURCE_DIR}/deps/pixelmatch-cpp/include)
 mapbox_base_add_library(shelf-pack-cpp ${PROJECT_SOURCE_DIR}/deps/shelf-pack-cpp/include)
 mapbox_base_add_library(supercluster.hpp ${PROJECT_SOURCE_DIR}/deps/supercluster.hpp/include)
