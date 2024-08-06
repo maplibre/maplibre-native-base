@@ -282,7 +282,7 @@ outputs
 
 ## A real world example
 
-Let's assume you want to create a line gradient to be used in Mapbox GL-Native. We can programatically construct the data structure as we would do it if the data comes from a backend data source:
+Let's assume you want to create a line gradient to be used in MapLibre Native. We can programatically construct the data structure as we would do it if the data comes from a backend data source:
 
 ```C++
     using A = mapbox::base::ValueArray;
@@ -335,4 +335,4 @@ results in:
 ]
 ```
 
-See https://docs.mapbox.com/mapbox-gl-js/example/line-gradient/ to learn more about line gradients in Mapbox SDKs.
+See https://maplibre.org/maplibre-style-spec/layers/#line-gradient to learn more about line gradients.
